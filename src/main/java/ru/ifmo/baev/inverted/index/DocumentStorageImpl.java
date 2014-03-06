@@ -1,4 +1,4 @@
-package ru.ifmo.baev;
+package ru.ifmo.baev.inverted.index;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -27,6 +27,11 @@ public class DocumentStorageImpl implements DocumentStorage {
     @Override
     public Document get(String docid) {
         return storage.get(docid);
+    }
+
+    @Override
+    public int size() {
+        return storage.size();
     }
 
 

@@ -1,4 +1,4 @@
-package ru.ifmo.baev;
+package ru.ifmo.baev.inverted.index;
 
 import java.util.List;
 

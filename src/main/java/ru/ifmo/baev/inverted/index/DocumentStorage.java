@@ -1,4 +1,4 @@
-package ru.ifmo.baev;
+package ru.ifmo.baev.inverted.index;
 
 /**
  * @author Dmitry Baev charlie@yandex-team.ru
@@ -9,4 +9,6 @@ public interface DocumentStorage {
     public void add(Document... documents);
 
     public Document get(String docid);
+
+    public int size();
 }

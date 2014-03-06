@@ -1,4 +1,4 @@
-package ru.ifmo.baev;
+package ru.ifmo.baev.inverted.index;
 
 /**
  * @author Dmitry Baev charlie@yandex-team.ru
@@ -8,6 +8,9 @@ public interface TermStorage {
 
     public void update(Document document);
 
-    public Term getTerm(String word);
+    public Term getTerm(String term);
 
+    public double getAverageTermLength();
+
+    public int size();
 }
