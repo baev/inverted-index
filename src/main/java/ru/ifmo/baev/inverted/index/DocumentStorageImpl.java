@@ -1,5 +1,7 @@
 package ru.ifmo.baev.inverted.index;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -9,6 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class DocumentStorageImpl implements DocumentStorage {
 
+    @JsonProperty("storage")
     private Map<String, Document> storage;
 
     public DocumentStorageImpl() {

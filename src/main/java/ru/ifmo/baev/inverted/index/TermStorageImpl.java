@@ -1,5 +1,8 @@
 package ru.ifmo.baev.inverted.index;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -9,8 +12,10 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class TermStorageImpl implements TermStorage {
 
+    @JsonProperty("storage")
     private Map<String, Term> storage;
 
+    @JsonProperty("summaryTermLength")
     private long summaryTermLength;
 
     public TermStorageImpl() {
@@ -41,6 +46,7 @@ public class TermStorageImpl implements TermStorage {
         return storage.get(term);
     }
 
+    @JsonIgnore
     @Override
     public double getAverageTermLength() {
         return ((double) summaryTermLength) / size();
@@ -50,5 +56,4 @@ public class TermStorageImpl implements TermStorage {
     public int size() {
         return storage.size();
     }
-
 }

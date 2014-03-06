@@ -26,7 +26,14 @@ public class Document {
 
     private String id;
 
+    public Document() {
+    }
+
     public Document(String body, String description) {
+        init(body, description);
+    }
+
+    public void init(String body, String description) {
         this.body = body;
         this.description = description;
         initTerms();

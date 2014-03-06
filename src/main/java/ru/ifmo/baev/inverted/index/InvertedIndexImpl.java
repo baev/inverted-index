@@ -54,5 +54,4 @@ public class InvertedIndexImpl implements InvertedIndex {
         return documentStorage;
     }
 
-
 }

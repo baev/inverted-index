@@ -16,11 +16,14 @@ public class Term {
 
     private DocidBlock docidBlock;
 
+    public Term() {
+    }
+
     public Term(String body) {
         this.body = body;
         this.matchCount = 0;
         this.id = UUID.randomUUID().toString();
-        this.docidBlock = new DocidBlockImpl();
+        this.docidBlock = new DocidBlock();
     }
 
     public String getBody() {
